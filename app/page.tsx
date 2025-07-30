@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
+import { ParticlesBackground } from '@/components/ui/particle-background'
 import {
   MorphingDialog,
   MorphingDialogTrigger,
@@ -125,7 +126,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-24"
+      className="space-y-14"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
