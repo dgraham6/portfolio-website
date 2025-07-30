@@ -50,8 +50,14 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
+              {/* Header (with its own particle wrapper) */}
               <Header />
-              {children}
+
+              {/* Spacer to push content below header/particles */}
+              <div className="mt-16">
+                {children}
+              </div>
+
               <Footer />
             </div>
           </div>
@@ -60,3 +66,4 @@ export default function RootLayout({
     </html>
   )
 }
+
