@@ -11,7 +11,7 @@ type WorkExperience = {
   title: string
   start: string
   end: string
-  link: string
+  link?: string
   id: string
 }
 
@@ -27,25 +27,23 @@ type SocialLink = {
   link: string
 }
 
-export const PROJECTS: Project[] = [
+export const PROJECTS = [
   {
-    name: 'Motion Primitives Pro',
+    name: "Sudoku-SAT Performance Lab",
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
-    id: 'project1',
+      "SAT-based solver performance experiments with optimized encodings and parallelism.",
+    video: "/images/sat.png",
+    link: "https://github.com/dgraham6/sudoku-sat-perf-lab",
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
-    id: 'project2',
+    name: "Taxi Trip Time Prediction Model",
+    description:
+      "Predictive modeling on the NYC Taxi dataset, exploring trip duration and route optimization, supported by exploratory data analysis.",
+    video: "/images/taxi.png",
+    link: "https://github.com/dgraham6/taxi-eda",
   },
 ]
+
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
@@ -54,7 +52,6 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Data Science Intern',
     start: 'May 2025',
     end: 'August 2025',
-    link: 'https://www.consumersenergy.com',
   },
   {
     id: 'work2',
@@ -62,7 +59,6 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Assistant Researcher — Multidisciplinary Design Program',
     start: 'Aug 2023',
     end: 'Jan 2024',
-    link: 'https://mdp.engin.umich.edu',
   },
 ];
 
@@ -87,7 +83,7 @@ export const EDUCATION = [
     degree: 'B.S. Data Science - Minor in Math',
     field: 'College of Engineering',
     start: 'Aug 2023',
-    end: 'Apr 2027',
+    end: 'Dec 2026',
     image: 'images/michigan-wolverines-1-logo-black-and-white.png'
   },
   // …you can add more entries here
