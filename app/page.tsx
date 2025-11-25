@@ -155,8 +155,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-    Hello — I’m interested in deep learning for complex algorithms and processes, 
-    with a focus on predictive modeling to tackle challenging problems.
+    Hello. I’m interested in machine learning. I also like Michigan Footbal :)
           </p>
         </div>
       </motion.section>
