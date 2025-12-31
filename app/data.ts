@@ -75,8 +75,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ]
 
-export const EMAIL = 'dgraham7362@email.com'
-
 export const EDUCATION = [
   {
     school: 'University of Michigan',
