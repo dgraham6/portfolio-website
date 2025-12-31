@@ -155,7 +155,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-Hello! I’m interested in machine learning. I also like Michigan Football and Manchester City :)
+Hello! I’m interested in machine learning and C++. I also love Michigan sports and Manchester City. Feel free to email me at digraham[at]umich[dot]edu
           </p>
         </div>
       </motion.section>
@@ -273,7 +273,6 @@ Hello! I’m interested in machine learning. I also like Michigan Football and M
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
