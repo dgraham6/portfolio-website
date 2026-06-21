@@ -11,6 +11,8 @@ type WorkExperience = {
   title: string
   start: string
   end: string
+  location?: string
+  status?: 'Incoming' | 'Current'
   link?: string
   id: string
 }
@@ -47,11 +49,30 @@ export const PROJECTS = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
+    id: 'work-amazon',
+    company: 'Amazon',
+    title: 'Software Development Engineer Intern',
+    start: 'Aug 2026',
+    end: 'Nov 2026',
+    location: 'Bellevue, WA',
+    status: 'Incoming',
+  },
+  {
+    id: 'work-evercore',
+    company: 'Evercore',
+    title: 'AI/ML Engineer Intern',
+    start: 'June 2026',
+    end: 'Present',
+    location: 'New York, NY',
+    status: 'Current',
+  },
+  {
     id: 'work1',
     company: 'Consumers Energy',
     title: 'Data Science Intern',
     start: 'May 2025',
-    end: 'August 2025',
+    end: 'Aug 2025',
+    location: 'Jackson, MI',
   },
   {
     id: 'work2',
@@ -59,6 +80,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Assistant Researcher — Multidisciplinary Design Program',
     start: 'Aug 2023',
     end: 'Jan 2024',
+    location: 'Ann Arbor, MI',
   },
 ];
 
@@ -78,10 +100,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const EDUCATION = [
   {
     school: 'University of Michigan',
-    degree: 'B.S. Data Science - Minor in Math',
+    degree: 'B.S. Computer Science — Minor in Mathematics',
     field: 'College of Engineering',
     start: 'Aug 2023',
-    end: 'Dec 2026',
+    end: 'May 2027',
     image: 'images/michigan-wolverines-1-logo-black-and-white.png'
   },
   // …you can add more entries here

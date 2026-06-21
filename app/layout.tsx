@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Newsreader } from 'next/font/google'
 import './globals.css'
-import { Header } from './header'
-import { Footer } from './footer'
+import { Shell } from './shell'
 import { ThemeProvider } from 'next-themes'
 
 export const viewport: Viewport = {
@@ -32,15 +31,21 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+const newsreader = Newsreader({
+  variable: '--font-newsreader',
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${geist.variable} ${geistMono.variable} ${newsreader.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
       >
         <ThemeProvider
           enableSystem={true}
@@ -48,18 +53,8 @@ export default function RootLayout({
           storageKey="theme"
           defaultTheme="system"
         >
-          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
-            <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
-              {/* Header (with its own particle wrapper) */}
-              <Header />
-
-              {/* Spacer to push content below header/particles */}
-              <div className="mt-16">
-                {children}
-              </div>
-
-              <Footer />
-            </div>
+          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-geist)]">
+            <Shell>{children}</Shell>
           </div>
         </ThemeProvider>
       </body>

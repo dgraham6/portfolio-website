@@ -1,1 +1,10 @@
 node_modules
+
+# build output
+.next/
+out/
+
+# misc
+.DS_Store
+*.tsbuildinfo
+tsconfig.tsbuildinfo
