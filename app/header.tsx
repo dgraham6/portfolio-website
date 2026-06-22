@@ -8,7 +8,7 @@ export function Header() {
       <div>
         <Link
           href="/"
-          className="font-[family-name:var(--font-newsreader)] text-3xl font-medium text-black dark:text-white"
+          className="font-[family-name:var(--font-newsreader)] text-3xl font-medium text-ink dark:text-white"
         >
           Drake Graham
         </Link>

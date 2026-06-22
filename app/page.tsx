@@ -85,7 +85,7 @@ function ProjectMedia({ src }: ProjectMediaProps) {
         </MorphingDialogContent>
 
         <MorphingDialogClose
-          className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
+          className="fixed top-6 right-6 h-fit w-fit rounded-full bg-cream p-1"
           variants={{
             initial: { opacity: 0 },
             animate: { opacity: 1, transition: { delay: 0.3, duration: 0.1 } },
@@ -110,7 +110,7 @@ export default function Personal() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h1 className="font-[family-name:var(--font-newsreader)] text-5xl font-medium tracking-tight text-black sm:text-6xl dark:text-white">
+          <h1 className="font-[family-name:var(--font-newsreader)] text-5xl font-medium tracking-tight text-ink sm:text-6xl dark:text-white">
             Drake Graham
           </h1>
           <p className="mt-3 text-lg text-zinc-500 dark:text-zinc-400">
@@ -129,7 +129,7 @@ export default function Personal() {
                   href={item.link}
                   target={item.link.startsWith('http') ? '_blank' : undefined}
                   rel="noopener noreferrer"
-                  className="text-zinc-600 underline-offset-4 transition-colors hover:text-black hover:underline dark:text-zinc-400 dark:hover:text-white"
+                  className="text-zinc-600 underline-offset-4 transition-colors hover:text-ink hover:underline dark:text-zinc-400 dark:hover:text-white"
                 >
                   {item.label}
                 </a>
@@ -150,7 +150,7 @@ export default function Personal() {
       {/* ---------- Content curtain (rises over the hero) ---------- */}
       <div
         id="content"
-        className="relative z-10 rounded-t-[2.5rem] border-t border-zinc-100 bg-white shadow-[0_-24px_48px_-24px_rgba(0,0,0,0.12)] dark:border-zinc-800 dark:bg-zinc-950"
+        className="relative z-10 rounded-t-[2.5rem] border-t border-zinc-200/70 bg-cream shadow-[0_-24px_48px_-24px_rgba(0,0,0,0.12)] dark:border-zinc-800 dark:bg-zinc-950"
       >
         <div className="mx-auto w-full max-w-screen-sm space-y-16 px-4 py-20 sm:py-28">
           <motion.section

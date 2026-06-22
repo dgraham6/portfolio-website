@@ -2,6 +2,13 @@
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
 
+/* Minimalist warm palette: a soft off-white surface and a gentle "ink"
+   that replaces stark white/black throughout the light theme. */
+@theme {
+  --color-cream: #f5f3ee;
+  --color-ink: #2a2825;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still

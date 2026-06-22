@@ -10,7 +10,7 @@ import type { RecursivePartial } from 'tsparticles-engine'
 export function ParticlesBackground() {
   const { resolvedTheme } = useTheme()
   const isDark = resolvedTheme === 'dark'
-  const dotColor = isDark ? '#ffffff' : '#000000'
+  const dotColor = isDark ? '#ffffff' : '#2a2825'
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine)
