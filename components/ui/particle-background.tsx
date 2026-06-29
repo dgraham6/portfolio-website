@@ -3,14 +3,11 @@
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadSlim } from 'tsparticles-slim'
-import { useTheme } from 'next-themes'
 import type { Engine, Container, IOptions } from 'tsparticles-engine'
 import type { RecursivePartial } from 'tsparticles-engine'
 
 export function ParticlesBackground() {
-  const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme === 'dark'
-  const dotColor = isDark ? '#ffffff' : '#2a2825'
+  const dotColor = '#2a2825'
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine)

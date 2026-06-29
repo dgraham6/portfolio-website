@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono, Newsreader } from 'next/font/google'
 import './globals.css'
 import { Shell } from './shell'
-import { ThemeProvider } from 'next-themes'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -45,18 +44,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geistMono.variable} ${newsreader.variable} bg-cream tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${geist.variable} ${geistMono.variable} ${newsreader.variable} bg-cream tracking-tight antialiased`}
       >
-        <ThemeProvider
-          enableSystem={true}
-          attribute="class"
-          storageKey="theme"
-          defaultTheme="system"
-        >
-          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-geist)]">
-            <Shell>{children}</Shell>
-          </div>
-        </ThemeProvider>
+        <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-geist)]">
+          <Shell>{children}</Shell>
+        </div>
       </body>
     </html>
   )
